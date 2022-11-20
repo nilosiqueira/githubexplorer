@@ -3,7 +3,7 @@ import { FiChevronRight } from 'react-icons/fi';
 import { Title, Form, Repositories } from './styles';
 import logoImg from '../../assets/logo.svg';
 import api from '../../services/api';
-import Repository from '../Repository';
+
 
 interface Repository {
     login: string;
@@ -24,7 +24,7 @@ const Dashboard: React.FC = () => {
 
             setRepositories([...repositories, repository]);
             setNewRepo('');
-            console.log(repository);
+
     }
 
     return (
@@ -42,6 +42,7 @@ const Dashboard: React.FC = () => {
                     <a key={repository.login} href="teste">
                     <img 
                     src={repository.avatar_url} 
+                    alt="avatar"
                     />
                     <div>
                         <strong>{repository.login}</strong>
